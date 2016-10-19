@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.screenshots  = "http://f.cl.ly/items/2c32450e1K3j2P1t242r/GDIIndexBar-3.png", "http://f.cl.ly/items/2x2H2x0A3T3k0i3y0p1i/GDIIndexBar-2.png"
   s.license      = 'MIT'
   s.author       = { "Grant Davis" => "grant@grantdavisinteractive.com" }
-  s.source       = { :git => "https://github.com/gdavis/GDIIndexBar.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/wjq19842000/GDIIndexBar.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'

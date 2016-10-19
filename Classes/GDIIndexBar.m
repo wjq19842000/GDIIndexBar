@@ -277,10 +277,18 @@ CGPoint CGPointAdd(CGPoint point1, CGPoint point2) {
 {
     CGPoint relativeTableViewTopRightPoint = [_tableView convertPoint:CGPointMake(_tableView.frame.size.width, 0)
                                                                toView:self.superview];
+    // WJQ start
+    relativeTableViewTopRightPoint.y = _tableView.frame.origin.y;
+    // WJQ end
+    
     CGPoint origin = CGPointMake(relativeTableViewTopRightPoint.x - _barWidth,
                                  relativeTableViewTopRightPoint.y + _tableView.contentOffset.y + _tableView.contentInset.top);
     
     CGFloat height = _tableView.frame.size.height - (_tableView.contentInset.top + _tableView.contentInset.bottom);
+    
+    // WJQ start
+    height = _tableView.frame.size.height;
+    // WJQ end
     
     CGSize size = CGSizeMake(_barWidth, height);
     return (CGRect){ origin, size };
